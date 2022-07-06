@@ -10,7 +10,7 @@ Before migrating do the following:
 Steps to migrate
 1. Clone the repo
 2. Make sure jq is installed and local dynamodb is running
-3. AWS dynamodb tables have been created with indexs. Use aws cli lis-tables, describe-table command to get that information from local dynamodb
+3. AWS dynamodb tables have been created with indexs. Use aws cli list-tables, describe-table command to get that information from local dynamodb
 e.g aws dynamodb list-tables --endpoint-url http://localhost:8000
 aws dynamodb describe-table --table-name StudentSignInOut --endpoint-url http://localhost:8000
 4. The default scan record size is 10, which is optimal for any size table increasing it may cause unprocessed records during upload. Change at your own risk.
